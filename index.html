@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск записей по комментариям</title>
+</head>
+<body>
+    <h1>Поиск записей по комментариям</h1>
+
+    <form action="search.php" method="post">
+        <label for="searchText">Введите текст комментария (минимум 3 символа): </label>
+        <input type="text" id="searchText" name="searchText" required minlength="3">
+        <button type="submit">Найти</button>
+    </form>
+</body>
+</html>
