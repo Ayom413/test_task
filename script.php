@@ -10,7 +10,6 @@ try {
     die("Ошибка подключения к базе данных: " . $e->getMessage());
 }
 
-// Загрузка записей блога
 $postsJson = file_get_contents('https://jsonplaceholder.typicode.com/posts');
 $posts = json_decode($postsJson, true);
 
@@ -19,7 +18,6 @@ foreach ($posts as $post) {
     $stmt->execute([$post['id'], $post['userId'], $post['title'], $post['body']]);
 }
 
-// Загрузка комментариев
 $commentsJson = file_get_contents('https://jsonplaceholder.typicode.com/comments');
 $comments = json_decode($commentsJson, true);
 
