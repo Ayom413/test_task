@@ -26,7 +26,6 @@ foreach ($comments as $comment) {
     $stmt->execute([$comment['id'], $comment['postId'], $comment['name'], $comment['email'], $comment['body']]);
 }
 
-// Вывод результата
 $postsCount = count($posts);
 $commentsCount = count($comments);
 echo "Загружено $postsCount записей и $commentsCount комментариев\n";
